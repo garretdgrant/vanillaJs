@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <main>
+        <h1>Convert from Fahrenheit to Celsius</h1>
+        
+        <script>
+            'use strict';
+            const tempF = parseFloat(prompt("Please enter a temperature in farenheit", 212));
+            const tempC = (tempF -32) * (5/9);
+            const message = tempF.toFixed(1) + " F" + " = " + tempC.toFixed(1) + " C";
+            document.write(`${message}`);
+        </script>
+    </main>
+</body>
+</html>

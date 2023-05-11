@@ -1,0 +1,9 @@
+            INPUT           |           OUTPUT
+Subtotal    |   Tax Rate    |   Sales Tax   |   Total
+-100            11              alert()         alert()
+100             12              alert()         alert()
+1000            10              100.00          1100.00
+500             5               25.00           525.00
+100             null            alert()         alert()
+null            10              alert()         alert()
+                    

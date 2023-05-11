@@ -1,0 +1,21 @@
+#title{
+    color: blue;
+}
+
+label{
+    float: left;
+    width: 16em;
+    text-align: right;
+}
+
+div{
+    margin-bottom: 0.5em;
+}
+
+input{
+    margin-left: 1em;
+}
+
+#calculate{
+    margin-bottom: 1em;
+}

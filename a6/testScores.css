@@ -1,0 +1,32 @@
+
+body {
+    width: 510px;
+    border: 3px solid blue;
+}
+
+span{
+    color: red;
+}
+
+h1, h2 {
+    color: blue;
+}
+
+label{
+    display: inline-block;
+    width: 3em;
+    text-align: right;
+}
+
+input {
+    margin-left: 1em;
+}
+
+#scores{
+    width: 10 em;
+    text-align: left;
+}
+
+#classChanged {
+    color: blue;
+}
