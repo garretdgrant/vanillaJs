@@ -1,13 +1,12 @@
 "use strict";
 
 const $ = (selector) => document.querySelector(selector);
-const $all = (selector) => document.querySelectorAll(selector);
 
 const names = [];
 const scores = [];
 
 const isInputValid = (name, score) =>{
-    return !!name && !!score && 0 <= score && score <= 100;
+    return !!name && 0 <= score && score <= 100;
 };
 
 const addScore = () => {
@@ -17,7 +16,7 @@ const addScore = () => {
     
     // get input values from nodes
     const namevalue = nameInputNode.value;
-    const scoreValue = scoreInputNode.value;
+    const scoreValue = parseInt(scoreInputNode.value);
 
     if (!isInputValid(namevalue, scoreValue)){
         // get appropriate nodes
@@ -47,16 +46,12 @@ const addScore = () => {
         // push input to arrays
         names.push(namevalue);
         scores.push(scoreValue);
-        console.log(names, scores);
-        displayScores();
     }
     // Focus and clear previous inputs
     nameInputNode.focus();
     nameInputNode.value = "";
     scoreInputNode.value = "";
 };
-
-
 
 
 const displayResults = () => {
@@ -69,14 +64,15 @@ const displayResults = () => {
     let highScore = -1;
     let person = "";
     for(let i = 0; i < names.length; i++){
-        if (scores[i] > highScore){
+        const currentScore = scores[i];
+        if (currentScore > highScore){
             highScore = scores[i];
             person = names[i];
         }
     }
 
     const resultsDiv = $("#results");
-    const avg = scores.reduce((num, a) => num + a, 0)/scores.length; 
+    const avg = (scores.reduce((num, a) => num + a, 0)/scores.length).toFixed(2); 
     const display = {highScore, avg, person};
    
     // Clear previous nodes
@@ -91,7 +87,6 @@ const displayResults = () => {
     const avgText = `Average score = ${display.avg}`;
     avgNode.textContent = avgText;
 
-    console.log(display);
     //Create high score node
     const highScoreNode = document.createElement("p");
     const highScoreText = `High score = ${display.person} with a score of 

@@ -1,0 +1,6 @@
+    Name    |   Score   |   Expected    |   Actual
+    Garret  |   100     |   Garret 100  |   Garret 100
+    ""      |   100     |   Error       |   Error
+    Jay     |   101     |   Error       |   Error
+    Prof C  |   -1      |   Error       |   Error
+    Prof C  |   95      |   Prof C 95   |   Prof C 95
