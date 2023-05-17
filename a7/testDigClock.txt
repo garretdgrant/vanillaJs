@@ -1,0 +1,3 @@
+Since there are no inputs to this application, testing was done by
+using google console (logs, debugger) and testing the functionality
+of the stop watch using the start stop and reset buttons. 
