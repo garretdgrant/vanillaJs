@@ -37,8 +37,8 @@ const tickStopWatch = () => {
     }
 
     msSpan.textContent = padMilliseconds(elapsedMilliseconds);
-    sSpan.textContent = padSingleDigit(elapsedSeconds);
-    mSpan.textContent = padSingleDigit(elapsedMinutes);
+    sSpan.textContent = padSingleDigit(elapsedSeconds) + ":";
+    mSpan.textContent = padSingleDigit(elapsedMinutes) + ":";
 
 };
 const startStopWatch = (e) => {
