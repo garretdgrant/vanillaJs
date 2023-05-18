@@ -1,0 +1,27 @@
+body{
+    width: 650px;
+    border: solid blue 3px;
+    padding: 15px 25px;
+    font-size: 87.5%;
+}
+
+h1{
+    font-size: 150%;
+}
+
+h2{
+    font-size: 120%;
+    padding: .25em 0 .25em 25px;
+}
+
+div.hide{
+    display: none;
+}
+
+a, a:focus, a:hover{
+    color: blue;
+}
+
+p{
+    padding: .25em 0 .25em 25px;
+}
