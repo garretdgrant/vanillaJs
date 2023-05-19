@@ -11,19 +11,11 @@ $(document).ready( () => {
        
         // Assign and animate the new image to the main image
         const mainImg = $("#image");
-        mainImg.animate({
-            opacity: 0,
-            marginLeft: "-=205"
-        },
-        {
-            duration:1000,
-            complete: ()=>{
+        mainImg.animate({opacity: 0, marginLeft: "-=205"},
+        { duration:1000,
+            complete: ()=> {
                 mainImg.attr("src", imgUrl);
-                mainImg.animate({
-                    opacity: 1,
-                    marginLeft: "+=205"
-                }, 1000);
+                mainImg.animate({opacity: 1, marginLeft: "+=205"}, 1000);
             }});
-
     });
 });
