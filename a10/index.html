@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservation.css">
+    <title>Reservation</title>
+</head>
+<body>
+    <h1>Reservation Request</h1>
+    <form action="response.html" method="get"
+        name="reservation_form" id="reservation_form">
+        <fieldset>
+            <legend>General Information</legend>
+            <div>
+                <label for="arrival_date">Arrival date:</label>
+                <input type="date" name="arrival_date" id="arrival_date">
+                <span id="arrivalError"></span><br/>
+
+                <label for="nights">Nights:</label>
+                <input type="text" id="nights">
+                <span id="nights_error"></span><br/>
+                
+                <label for="adults">Adults:</label>
+                <select name="" id="adults">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <br/>
+                
+                <label for="children">Children:</label>
+                <select name="" id="children">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+        </fieldset>        
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <div>
+                <div>
+                    <label for="room_type">Room type:</label>
+                    <input type="radio" name="room" id="standard" class="left" value="standard" checked>
+                    <label for="standard">Standard</label>
+                    <input type="radio" name="room" id="business" class="left" value="business">
+                    <label for="business">Business</label>
+                    <input type="radio" name="room" id="suite" class="left" value="suite">
+                    <label for="suite">Suite</label>
+                </div>
+
+                <div>
+                    <label for="room_type">Bed type:</label>
+                    <input type="radio" name="bed" id="king" class="left" value="king" checked>
+                    <label for="king">King</label>
+                    <input type="radio" name="bed" id="double" class="left" value="double">
+                    <label for="double">double</label><br>
+                    <input type="checkbox" name="smoking" id="smoking">
+                    <label for="smoking">Smoking</label>
+                </div>
+        </fieldset> 
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+                <span id="name_error"></span><br/>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="name@gmail.com">
+                <span id="email_error"></span><br/>
+
+                <label for="Phone">Phone:</label>
+                <input type="text" placeholder="999-999-9999" id="phone">
+                <span id="phone_error"></span><br/>
+            </div>
+        </fieldset> 
+        <button class="submit">Submit Request</button>
+    </form>
+</body>
+<script src="jquery-3.7.0.min.js"></script>
+<script src="reservation.js"></script>
+</html>
